@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone git') {
+            steps {
+                bat "git clone https://github.com/harshav339/Maven123.git"
+                bat "mvn clean -f Maven123"
+            }
+        }
+        stage('Test') {
+            steps {
+                bat 'mvn test -f Maven123'
+            }
+        }
+        stage('Build') {
+            steps {
+                bat "mvn package -f Maven123"
+            }
+        }
+    }
+}

@@ -36,7 +36,7 @@
                         </goals>
                         <phase>compile</phase>
                         <configuration>
-                            <arguments>make src/Main.elm --output=${project.build.directory}/classes/META-INF/resources/index.html</arguments>
+                            <arguments>make src/Main.elm --output=${project.build.directory}\classes\META-INF\resources\index.html</arguments>
                             <workingDirectory>${basedir}</workingDirectory>
                         </configuration>
                     </execution>
